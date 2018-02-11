@@ -3,14 +3,69 @@
 <html>
     <!-- Put styles and scripts up here in the head -->
 	<head>
-		<title>Whatever title of the page here</title>
-	</head>
-	<link rel="stylesheet" type="text/css" href="csssheet.css">
+	<style>
+    .colorBlock {
+      width: 100px;
+      height: 100px;
+    }
+	#red {
+      background-color: #CD5C5C;
+	}
+    #orange {
+      background-color: #FF8C00;
+    }
+    #yellow {
+      background-color: #ffff99;
+    }
 	
-	<!-- Put stuff you can see (content) in the body -->
+	#green {
+	  background-color: #99ff99;
+	}
+	
+	#purpleish {
+	  background-color: #D8BFD8;
+	}
+	
+	#blue {
+	  background-color: #6699ff;
+	}
+	
+	#LightPink {
+	  background-color: #FFB6C1;
+	}
+	
+	#indigo {
+	background-color: #3333cc;
+	}
+		
+	
+	<title>Whatever title of the page here</title>
+  </style>
+</head>
 
+	<link rel="stylesheet" type="text/css" href="csssheet.css">
+<script src= "javascript.js"></script>
 	<body>
-	<h1>Today I Feel...</h1>
-		<input type="color"> </input>
+	<div class="page1">
+	<h1>Today I'm feeling...</h1>
+	<div class="colorBlock" id="red"></div>
+  <div class="colorBlock" id="orange"></div>
+  <div class="colorBlock" id="yellow"></div>
+   <div class="colorBlock" id="green"></div>
+   <div class="colorBlock" id="blue"></div>
+	  <div class="colorBlock" id="purpleish"></div>
+	       <div class="colorBlock" id="indigo"></div>
+	  <div class="colorBlock" id="LightPink"></div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+   //Create anonymous function that listens for a click on anything with the class colorBlock
+    $(".colorBlock").click(function() {
+      //Get the background color of the clicked color block by using the this object
+      var $backgroundColor = $(this).css("background-color");
+      //Set the body's background-color to the received background-color
+      $("body").css("background-color", $backgroundColor);
+    });
+  </script>
+		</div>
 	</body>
 </html>

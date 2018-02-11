@@ -1,8 +1,5 @@
-body
-{
-	font-family:cursive;
-	text-align:bottom;
-}
-
-input[type=color] {
-	
+h1 {
+	font-family:Chalkduster;
+	text-align:center;
+	padding-top:20px;
+	}
